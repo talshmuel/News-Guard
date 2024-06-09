@@ -11,8 +11,9 @@ public class Report {
     ArrayList<User> usersWhoLiked;
     ArrayList<Comment> comments;
     ArrayList<User> guards;
-    Rate reliabilityScale;
+    Rate reliabilityRate;
     User reporter;
     boolean isAnonymousReport;
     ArrayList<User> tags;
+    ArrayList<Genre> genres;
 }

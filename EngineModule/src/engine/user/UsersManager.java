@@ -1,7 +1,17 @@
 package engine.user;
 
-import java.util.ArrayList;
+import data.transfer.object.NewUserDTO;
+import java.util.Map;
 
 public class UsersManager {
-    ArrayList<User> users;
+    Map<String,User> usersByEmail;
+    public void addNewUser(NewUserDTO newUserData){
+        if(usersByEmail.containsKey(newUserData.getEmail())){
+            //היוזר כבר קיים
+        }
+        else{
+            usersByEmail.put(newUserData.getEmail(), new User(newUserData));
+        }
+
+    }
 }

@@ -13,6 +13,7 @@ public class Engine {
     ReliabilityManager reliabilityManager;
 
     public void createNewUser(NewUserDTO newUserData){
+        usersManager.addNewUser(newUserData);
 
     }
 
