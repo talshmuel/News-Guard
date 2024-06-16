@@ -10,6 +10,8 @@ import engine.user.registration.UserRegistrationDetails;
 import java.util.ArrayList;
 
 public class User {
+    static int IDGenerator = 0;
+    int ID;
     UserRegistrationDetails registrationDetails;
     ArrayList<Report> reports;
     ArrayList<Notification> notifications;
@@ -17,6 +19,7 @@ public class User {
     Rate reliabilityRate;
 
     public User(NewUserDTO newUserData) {
+        ID = ++IDGenerator;
         this.registrationDetails = getRegistrationDetails(newUserData);
         reports = new ArrayList<>();
         notifications = new ArrayList<>();
@@ -24,6 +27,14 @@ public class User {
         reliabilityRate = Rate.THREE;//todo: להחליט מאיזה דירוג מתחיל יוזר חדש
 
     }
+    public String getEmail(){
+        return registrationDetails.getEmail();
+    }
+
+    public int getID() {
+        return ID;
+    }
+
     private UserRegistrationDetails getRegistrationDetails(NewUserDTO newUserData){
         ArrayList<Genre> genrePreferences = new ArrayList<>();
         ArrayList<Rate> ratePreferences = new ArrayList<>();
@@ -40,5 +51,12 @@ public class User {
                 ratePreferences, newUserData.getCountriesPreference(),
                 newUserData.isLocationAccessPermission());
 
+    }
+    public boolean checkUserPassword(String passwordToCheck){
+        return registrationDetails.checkUserPassword( passwordToCheck);
+    }
+    public void addNewReport(Report newReport){
+        reports.add(newReport);
+        newReport.setReporter(this);
     }
 }
