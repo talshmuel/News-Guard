@@ -4,6 +4,7 @@ import engine.reliability.managment.Rate;
 import engine.report.Genre;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class UserRegistrationDetails {
     String firstName;
@@ -30,5 +31,13 @@ public class UserRegistrationDetails {
         this.reliabilityRatePreference = reliabilityRatePreference;
         this.countriesPreference = countriesPreference;
         this.locationAccessPermission = locationAccessPermission;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public boolean checkUserPassword(String passwordToCheck){
+        return Objects.equals(passwordToCheck, this.password);
     }
 }
