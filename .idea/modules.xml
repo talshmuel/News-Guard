@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/DataTransferObjectModule/DataTransferObjectModule.iml" filepath="$PROJECT_DIR$/DataTransferObjectModule/DataTransferObjectModule.iml" />
       <module fileurl="file://$PROJECT_DIR$/EngineModule/EngineModule.iml" filepath="$PROJECT_DIR$/EngineModule/EngineModule.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/NewsGuardAppServer.iml" filepath="$PROJECT_DIR$/.idea/NewsGuardAppServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/serverNewsGuard/serverNewsGuard.iml" filepath="$PROJECT_DIR$/serverNewsGuard/serverNewsGuard.iml" />
     </modules>
   </component>
 </project>
