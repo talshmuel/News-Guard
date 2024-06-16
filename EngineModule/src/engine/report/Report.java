@@ -8,6 +8,8 @@ import java.sql.Time;
 import java.util.ArrayList;
 
 public class Report {
+    int ID;
+    static int IDGenerator = 0;
     String text;
     String imageURL;
     ArrayList<User> usersWhoLiked;
@@ -16,18 +18,19 @@ public class Report {
     Rate reliabilityRate;
     User reporter;
     boolean isAnonymousReport;
-    ArrayList<String> tags;
+    ArrayList<Integer> IDOfUsersTags;
     ArrayList<Genre> genres;
     Location location;
     Time timeReported;
 
-    public Report(String text, String imageURL, boolean isAnonymousReport, ArrayList<String> tagUsersEmails, ArrayList<Genre> genres, Location location) {
+    public Report(String text, String imageURL, boolean isAnonymousReport, ArrayList<Integer> IDOfUsersTags, ArrayList<Genre> genres, Location location) {
         this.text = text;
         this.imageURL = imageURL;
         this.reporter = reporter;
         this.isAnonymousReport = isAnonymousReport;
-        this.tags = tagUsersEmails;
+        this.IDOfUsersTags = IDOfUsersTags;
         this.genres = genres;
+        ID = ++IDGenerator;
     }
     public void setReporter(User reporter){
         this.reporter = reporter;

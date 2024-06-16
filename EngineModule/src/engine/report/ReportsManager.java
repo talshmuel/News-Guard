@@ -16,7 +16,7 @@ public class ReportsManager {
     public Report addNewReport(NewReportDTO newReportDTO){
         ArrayList<Genre> genreEnumList = convertGenreStrToEnum(newReportDTO.getGenres());
         Report newReport = new Report(newReportDTO.getText(), newReportDTO.getImageURL()
-                , newReportDTO.isAnonymousReport(), newReportDTO.getTagsUsersEmails()
+                , newReportDTO.isAnonymousReport(), newReportDTO.getIDOfUsersTags()
                 ,genreEnumList, newReportDTO.getLocation());
         reports.add(newReport);
         return newReport;

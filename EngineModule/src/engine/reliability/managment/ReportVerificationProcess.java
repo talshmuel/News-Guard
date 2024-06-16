@@ -18,7 +18,7 @@ public class ReportVerificationProcess {
         this.report = reportToVerify;
         guardsResponses = new HashMap<>();
         guards.forEach((guard)->{
-            guardsResponses.put(guard, GuardResponse.Avoid);
+            guardsResponses.put(guard, GuardResponse.Pending);
         });
     }
 

@@ -7,19 +7,19 @@ import java.util.ArrayList;
 public final class NewReportDTO {
     String text;
     String imageURL;
-    String reporterEmail;
+    int reporterID;
     boolean isAnonymousReport;
-    ArrayList<String> tagsUsersEmails;
+    ArrayList<Integer> IDOfUsersTags;
     ArrayList<String> genres;
     Location location;
     Time timeReported;
 
-    public NewReportDTO(String text, String imageURL, String reporterEmail, boolean isAnonymousReport, ArrayList<String> tagsUsersEmails, ArrayList<String> genres, Location location, Time timeReported) {
+    public NewReportDTO(String text, String imageURL, int reporterID, boolean isAnonymousReport, ArrayList<Integer> IDOfUsersTags, ArrayList<String> genres, Location location, Time timeReported) {
         this.text = text;
         this.imageURL = imageURL;
-        this.reporterEmail = reporterEmail;
+        this.reporterID = reporterID;
         this.isAnonymousReport = isAnonymousReport;
-        this.tagsUsersEmails = tagsUsersEmails;
+        this.IDOfUsersTags = IDOfUsersTags;
         this.genres = genres;
         this.location = location;
         this.timeReported = timeReported;
@@ -33,16 +33,16 @@ public final class NewReportDTO {
         return imageURL;
     }
 
-    public String getReporterEmail() {
-        return reporterEmail;
+    public int getReporterID() {
+        return reporterID;
     }
 
     public boolean isAnonymousReport() {
         return isAnonymousReport;
     }
 
-    public ArrayList<String> getTagsUsersEmails() {
-        return tagsUsersEmails;
+    public ArrayList<Integer> getIDOfUsersTags() {
+        return IDOfUsersTags;
     }
 
     public ArrayList<String> getGenres() {

@@ -29,7 +29,7 @@ public class Engine {
     public void addNewReportAndStartVerificationProcess(NewReportDTO newReportDTO){
         Report newReport = reportsManager.addNewReport(newReportDTO);
 
-        usersManager.addReportToUser(newReportDTO.getReporterEmail(), newReport);
+        usersManager.addReportToUser(newReportDTO.getReporterID(), newReport);
         reliabilityManager.startReportVerificationProcess(newReport);
     }
     public void setGuardVerificationResponse(int verificationProcessID, User guard, GuardResponse response){
