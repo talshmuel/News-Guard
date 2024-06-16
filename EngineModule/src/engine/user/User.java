@@ -31,6 +31,7 @@ public class User {
         return registrationDetails.getEmail();
     }
 
+
     public int getID() {
         return ID;
     }
